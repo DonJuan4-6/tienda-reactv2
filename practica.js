@@ -55,28 +55,6 @@ const disponibles = productos.filter(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 //FUNCION SUMAR a,b
 function suma(a, b) {
