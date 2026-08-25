@@ -1,11 +1,23 @@
 function ProductoCard({ producto }) {
+  const { nombre, precio, categoria, stock } = producto;
+  const estado = stock > 0 ? 'Disponible' : 'Agotado';
+  const mostrarProducto = () => {
+    alert(`Seleccionaste ${nombre}`);
+  };
+
   return (
-    <article>
-      <h2>{producto.nombre}</h2>
-      <p>${producto.precio}</p>
+    <article className="producto-card">
+      <h2>{nombre}</h2>
+      <p>Categoría: {categoria}</p>
+      <p>Precio: ${precio}</p>
+      <p>Stock: {stock}</p>
+      <p>Estado: {estado}</p>
+      <br/>
+      <button onClick={mostrarProducto} disabled={stock===0}>
+          {stock > 0 ? "Ver Producto" : "Agotado"}
+      </button>
     </article>
   );
 }
 
 export default ProductoCard;
-//exportacion de la parte de html con una tarjeta que contenga los productos de la lista.
