@@ -27,7 +27,7 @@ if (edad >= 18){
 // Reto: agregar 7 productos mas sin repetir id
 const productos = [
   { id: 1, nombre: 'Mouse', precio: 50000, stock: 5 },
-  { id: 2, nombre: 'Teclado', precio: 90000, stock: 0 },
+  { id: 2, nombre: 'Teclado', precio: 100000, stock: 0 },
   { id: 3, nombre: 'Monitor', precio: 650000, stock: 3 },
   { id: 4, nombre: 'CPU Core i7', precio: 780000, stock: 4 },
   { id: 5, nombre: 'GPU RTX 4060', precio: 1500000, stock: 2 },
@@ -44,10 +44,39 @@ const productos = [
 });
 */
 
-//filter() y find()
+/*
+//filter() -> ENCUENTRA LISTAS DE ELEMENTOS
+console.log("Productos en un rango de precio entre 50000 y 200000");
 const disponibles = productos.filter(
-  producto => producto.precio >= 50000 && producto.precio <= 200000
+    producto => producto.precio >= 50000 && producto.precio <= 200000
 );
+console.log(disponibles);
+
+//find() -> ENCUENTRA UN SOLO ELEMENTO
+const encontrado = productos.find(
+    producto => producto.id == 5
+);
+console.log("Producto con id: 5");
+console.log(encontrado);
+
+*/
+
+
+//some(), ever() y reduce()
+/*
+const hayAgotados = productos.some(p => p.stock === 0);
+
+const preciosValidos = productos.every(p => p.precio > 0);
+
+const valorInventario = productos.reduce(
+    (total, p) => total + p.precio * p.stock,
+    0
+);
+console.log("Hay productos agotados?",hayAgotados);
+console.log("Todos los productos tienen valor asignado?",preciosValidos);
+console.log("Valor total del inventario:",valorInventario);
+*/
+
 
 
 
