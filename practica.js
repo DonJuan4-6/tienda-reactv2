@@ -25,6 +25,7 @@ if (edad >= 18){
 
 //ARREGLOS DE OBJETOS:
 // Reto: agregar 7 productos mas sin repetir id
+
 const productos = [
   { id: 1, nombre: 'Mouse', precio: 50000, stock: 5 },
   { id: 2, nombre: 'Teclado', precio: 100000, stock: 0 },
@@ -87,8 +88,6 @@ console.log("Hay productos agotados?",hayAgotados);
 console.log("Todos los productos tienen valor asignado?",preciosValidos);
 console.log("Valor total del inventario:",valorInventario);
 */
-
-
 
 
 
