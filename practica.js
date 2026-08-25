@@ -10,18 +10,30 @@ console.log(resultado);
 
 
 //CONVERTIR FUNCION A FUNCION TIPO FLECHA
-/* Funcion a convertir:
-    function esMayorEdad(edad) { return edad >= 18; }
-*/
-/*
-let edad = 19; //ejemplos con 15 y 19
+//Funcion a convertir:
+    // function esMayorEdad(edad) { return edad >= 18; }
+
+
+/*let edad = 19; //ejemplos con 15 y 19
 const esMayorEdad = edad => edad >= 18;
 if (edad >= 18){
     console.log("Es mayor de edad")
 }else{
     console.log("Es menor de edad")
-}
+}*/
+
+// Convertir cuadrado(numero) a arrow function
+/*
+const cuadrado = numero => numero * numero;
+
+// Crear nombreCompleto(nombre, apellido) como arrow function
+const nombreCompleto = (nombre, apellido) => `${nombre} ${apellido}`;
+
+// Ejecutar cada función y comprobar su resultado
+console.log("Cuadrado de 5:", cuadrado(5));
+console.log("Nombre completo:", nombreCompleto("Juan", "Pérez"));
 */
+
 
 //ARREGLOS DE OBJETOS:
 // Reto: agregar 7 productos mas sin repetir id
@@ -39,22 +51,23 @@ const productos = [
   { id: 10, nombre: 'Fuente de poder 750W', precio: 720000, stock: 0 },
 
 ];
-//TERNARIO
-const producto = productos.find(p => p.id === 9);
 
-const copiaProducto = {
-    ...producto,
-    stock: 5
-};
-console.log(copiaProducto.stock > 0 ? 'Disponible' : 'Agotado');
+/*const nombres = productos.map(producto => producto.nombre);
+console.log("Nombres:", nombres);*/
 
+// 1. preciosConIva: precio * 1.19[cite: 2]
+/*const preciosConIva = productos.map(producto => producto.precio * 1.19);
+console.log("Precios con IVA:", preciosConIva);*/
 
-//forEach vs map()
-/*const nombres = productos.map(producto => {
-    console.log(producto.nombre)
-    return producto.nombre;
-});
-*/
+// 2. nombresMayuscula: nombres convertidos a mayúscula[cite: 2]
+const nombresMayuscula = productos.map(producto =>
+  producto.nombre.toUpperCase()
+);
+console.log("Nombres en mayúscula:", nombresMayuscula);
+/*
+// 3. resumenProductos: textos como "Mouse cuesta $50000"[cite: 2]
+const resumenProductos = productos.map(producto => `${producto.nombre} cuesta $${producto.precio}`);
+console.log("Resumen productos:", resumenProductos);*/
 
 /*
 //filter() -> ENCUENTRA LISTAS DE ELEMENTOS
