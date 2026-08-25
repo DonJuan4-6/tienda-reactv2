@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import ProductoCard from './components/ProductoCard';
+import { productos } from './data/productos';
 import './App.css'
 
-function App(){
-  const nombre = 'Diego';
-  const ficha = 3409609;
-
+function App() {
   return (
     <main>
-      <h1>Hola {nombre}</h1>
-      <p>Ficha {ficha}</p>
+      <h1>Tienda tecnológica</h1>
+      {productos.map(producto => (
+        <ProductoCard
+          key={producto.id}
+          producto={producto}
+        />
+      ))}
     </main>
   );
 }
-
 export default App;
