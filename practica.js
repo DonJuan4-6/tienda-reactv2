@@ -35,8 +35,19 @@ const productos = [
   { id: 7, nombre: 'Disco SSD 1TB', precio: 400000, stock: 1 },
   { id: 8, nombre: 'Audifonos', precio: 90000, stock: 3 },
   { id: 9, nombre: 'HDMI', precio: 20000, stock:  1 },
-  { id: 10, nombre: 'Fuente de poder 750W', precio: 720000, stock: 0 }
+  { id: 10, nombre: 'Fuente de poder 750W', precio: 720000, stock: 0 },
+
 ];
+//TERNARIO
+const producto = productos.find(p => p.id === 9);
+
+const copiaProducto = {
+    ...producto,
+    stock: 5
+};
+console.log(copiaProducto.stock > 0 ? 'Disponible' : 'Agotado');
+
+
 //forEach vs map()
 /*const nombres = productos.map(producto => {
     console.log(producto.nombre)
@@ -76,7 +87,6 @@ console.log("Hay productos agotados?",hayAgotados);
 console.log("Todos los productos tienen valor asignado?",preciosValidos);
 console.log("Valor total del inventario:",valorInventario);
 */
-
 
 
 
